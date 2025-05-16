@@ -3,6 +3,8 @@
 
 import { TbLayoutDashboard } from "react-icons/tb";
 import { TbBulb } from "react-icons/tb";
+import { TbReportAnalytics } from "react-icons/tb";
+
 
 export const analyticsLinks = [
     {
@@ -12,6 +14,10 @@ export const analyticsLinks = [
     {
         name: 'insight',
         Icon: TbBulb
+    },
+    {
+        name: 'record',
+        Icon: TbReportAnalytics
     }
 ];
 
@@ -57,7 +63,7 @@ export const inventoryLinks = [
 
 import { TbPinned } from "react-icons/tb";
 import { TbCheckbox } from "react-icons/tb";
-import { TbClipboardData } from "react-icons/tb";
+import { TbReportSearch } from "react-icons/tb";
 
 export const auditLinks = [
     {
@@ -66,7 +72,7 @@ export const auditLinks = [
     },
     {
         name: ['reports', 'reports-view', 'reports-history'],
-        Icon: TbClipboardData
+        Icon: TbReportSearch
     },
     {
         name: ['assignments', 'assignments-view', 'assignments-history'],
@@ -81,7 +87,7 @@ export const auditLinks2 = [
     },
     {
         name: ['reports', 'reports-view', 'reports-history'],
-        Icon: TbClipboardData
+        Icon: TbReportSearch
     },
 ];
 
@@ -144,21 +150,21 @@ export const managementLinks2 = [
 ////////////////////////////////////////////////////////
 
 export const superAdminPages = [
-    'dashboard', 'insight', 'receipt', 'dispatch', 'warehouse', 'product', 'category',
+    'dashboard', 'insight', 'record', 'receipt', 'dispatch', 'warehouse', 'product', 'category',
     'depot', 'terminal',
     'tasks', 'reports', /* 'assignments', */
     'user', 'infrastructure', 'logs', /* 'module' */,
 ]
 
 export const adminPages = [
-    'dashboard', /* 'report', */ 'receipt', 'dispatch', 'warehouse', 'product', 'category',
+    'dashboard', 'insight', 'record', 'receipt', 'dispatch', 'warehouse', 'product', 'category',
     'depot', 'terminal',
     'tasks', 'reports', /* 'assignments', */
     'user', 'infrastructure',
 ]
 
 export const inventoryPages = [
-    'dashboard', /* 'report', */ 'receipt', 'dispatch', 'warehouse', 'product', 'return', 'category',
+    'dashboard', 'insight', 'record', 'receipt', 'dispatch', 'warehouse', 'product', 'return', 'category',
 ]
 
 export const infrastructurePages = [
