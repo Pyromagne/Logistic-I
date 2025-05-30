@@ -47,9 +47,9 @@ class UserFactory extends Factory
                 'name' => 'Ricardo Aron III',
                 'email' => 'aroniii.ricardo@gmail.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('lgstc1admin1234'),
+                'password' => Hash::make('lgstc1superadmin1234'),
                 'remember_token' => Str::random(10),
-                'type' => 2051,
+                'type' => 2050,
             ],
             [
                 'name' => 'Kent Mark Tejada',
