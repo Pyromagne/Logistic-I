@@ -15,10 +15,10 @@ export const analyticsLinks = [
         name: 'insight',
         Icon: TbBulb
     },
-    {
+    /* {
         name: 'record',
         Icon: TbReportAnalytics
-    }
+    } */
 ];
 
 ////////////////////////////////////////////////////////
