@@ -15,23 +15,29 @@ export default function Login({ status, canResetPassword }) {
     remember: false,
   });
 
+  const [twoFactorModeLoading, setTwoFactorModeLoading] = useState(false);
   const [twoFactorMode, setTwoFactorMode] = useState(false);
   const [twoFactorCode, setTwoFactorCode] = useState('');
   const [twoFactorError, setTwoFactorError] = useState('');
 
   const submit = (e) => {
     e.preventDefault();
+    setTwoFactorModeLoading(true);
 
     axios.post(route('login'), data)
       .then(response => {
         if (response.data.twofa) {
           setTwoFactorMode(true);
+          setTwoFactorModeLoading(false);
         } else {
           // fallback
+          setTwoFactorModeLoading(false);
         }
       })
       .catch(error => {
-        console.error(error);
+        console.error(error)
+        toast.error('Invalid email or password');
+        setTwoFactorModeLoading(false);
       });
   };
 
@@ -183,8 +189,9 @@ export default function Login({ status, canResetPassword }) {
           <div className="flex items-center mt-4 mb-8 w-4/5">
             <button
               type="submit"
-              className="w-full font-medium p-2 rounded-md border"
+              className="w-full font-medium p-2 rounded-md border disable"
               style={{ background: theme.accent, color: theme.background, borderColor: theme.border }}
+              disabled={twoFactorModeLoading}
             >
               <p>{twoFactorMode ? 'Verify Code' : 'Log In'}</p>
             </button>
