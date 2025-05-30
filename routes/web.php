@@ -55,6 +55,7 @@ Route::middleware(["auth", "verified", PreventBackHistory::class])->group(functi
     Route::get('/assignments/history', action: fn() => Inertia::render('Assignments.History'))->name('assignments-history');
     Route::get('/module', fn() => Inertia::render('Module'))->name('module');
     Route::get('/infrastructure', fn() => Inertia::render('Infrastructure'))->name('infrastructure');
+    Route::get('/record', fn() => Inertia::render('Record'))->name('record');
 
     Route::get('/infrastructure/view', function (Request $request) {
         return Inertia::render('Infrastructure.View', [
